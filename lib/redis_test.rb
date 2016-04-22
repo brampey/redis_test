@@ -53,7 +53,7 @@ module RedisTest
         "dir"           => cache_path,
         "loglevel"      => loglevel,
         "databases"     => 16
-      }.map { |k, v| "#{k} #{v}" }.join('\n')
+      }.map { |k, v| "#{k} #{v}" }.join("\n")
       `echo '#{redis_options}' | redis-server -`
 
       wait_time_remaining = 5
